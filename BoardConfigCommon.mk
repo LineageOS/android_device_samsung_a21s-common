@@ -107,6 +107,9 @@ TARGET_KERNEL_SOURCE := kernel/samsung/exynos850
 TARGET_KERNEL_CLANG_VERSION := r416183b
 TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_TAG)/clang-$(TARGET_KERNEL_CLANG_VERSION)
 
+# Init
+TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_exynos3830
+
 # A/B
 AB_OTA_UPDATER := false
 
