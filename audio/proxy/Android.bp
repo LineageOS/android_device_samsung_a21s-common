@@ -36,9 +36,11 @@ cc_library_shared {
         "libaudioroutev2",
         "libalsautilsv2",
         "libexpat",
+        "libSamsungPostProcessConvertor",
     ],
     cflags: [
         "-DNO_USE_DEBUGFS",
+        "-DSEC_AUDIO_RESAMPLER",
         "-DSEC_AUDIO_SAMSUNGRECORD",
         "-DSEC_AUDIO_SUPPORT_LISTENBACK_DSPEFFECT",
         "-DSUPPORT_MCD_FEATURE",
