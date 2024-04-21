@@ -39,6 +39,7 @@ cc_library_shared {
     ],
     cflags: [
         "-DNO_USE_DEBUGFS",
+        "-DSEC_AUDIO_SAMSUNGRECORD",
         "-DSUPPORT_MCD_FEATURE",
     ],
 }

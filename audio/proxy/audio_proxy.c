@@ -1310,6 +1310,18 @@ int proxy_get_requested_frame_size(struct audio_proxy_stream *apstream)
            audio_bytes_per_sample(apstream->requested_format);
 }
 
+#ifdef SEC_AUDIO_SAMSUNGRECORD
+int32_t proxy_get_last_format(void *proxy_stream)
+{
+    struct audio_proxy_stream *apstream = (struct audio_proxy_stream *)proxy_stream;
+
+    audio_format_t format = apstream->skip_format_convert ?
+        proxy_get_actual_format(apstream) : apstream->requested_format;
+
+    return format;
+}
+#endif
+
 static int get_next_buffer(struct resampler_buffer_provider *buffer_provider,
                            struct resampler_buffer* buffer)
 {
@@ -4484,46 +4496,6 @@ void proxy_deinit(void *proxy __unused)
     }
     return ;
 }
-
-/******************************************************************************/
-/**                                                                          **/
-/** The ODM Proxy Functions                                                  **/
-/**                                                                          **/
-/******************************************************************************/
-#ifdef SEC_AUDIO_SAMSUNGRECORD
-void proxy_set_stream_format(void *proxy_stream, audio_format_t new_format, bool skip)
-{
-    struct audio_proxy_stream *apstream = (struct audio_proxy_stream *)proxy_stream;
-
-    if (new_format != AUDIO_FORMAT_INVALID) {
-        apstream->pcmconfig.format = pcm_format_from_audio_format(new_format);
-    }
-    apstream->skip_format_convert = skip;
-    check_conversion(apstream);
-    ALOGI("%s: new_format %d, skip_format_convert %d", __func__, new_format, apstream->skip_format_convert);
-}
-
-uint32_t proxy_get_last_channel_count(void *proxy_stream)
-{
-    struct audio_proxy_stream *apstream = (struct audio_proxy_stream *)proxy_stream;
-
-    int channel_cnt = apstream->skip_ch_convert ?
-        proxy_get_actual_channel_count(apstream)
-        : audio_channel_count_from_in_mask(apstream->requested_channel_mask);
-
-    return channel_cnt;
-}
-
-int32_t proxy_get_last_format(void *proxy_stream)
-{
-    struct audio_proxy_stream *apstream = (struct audio_proxy_stream *)proxy_stream;
-
-    audio_format_t format = apstream->skip_format_convert ?
-        proxy_get_actual_format(apstream) : apstream->requested_format;
-
-    return format;
-}
-#endif
 
 #ifdef SEC_AUDIO_DUMP
 /******************************************************************************/
