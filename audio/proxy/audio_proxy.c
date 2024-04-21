@@ -400,6 +400,11 @@ static void prepare_routing_device_config(void *proxy, int ausage, device_type t
     return;
 }
 
+#ifdef SEC_AUDIO_SUPPORT_LISTENBACK_DSPEFFECT
+void proxy_stop_karaoke_listenback(void *proxy);
+void proxy_start_karaoke_listenback(void *proxy);
+#endif
+
 static void enable_internal_path(void *proxy, int ausage, device_type target_device)
 {
     return;
@@ -610,7 +615,7 @@ static int fmradio_capture_start(struct audio_proxy *aproxy)
                  VC_FMRADIO_CAPTURE_CARD, FMRADIO_TRIGGER_DEVICE, 'c');
 
 #ifdef SEC_AUDIO_SUPPORT_LISTENBACK_DSPEFFECT
-        else if (aproxy->active_capture_ausage == AUSAGE_LISTENBACK &&
+        if (aproxy->active_capture_ausage == AUSAGE_LISTENBACK &&
                     aproxy->active_capture_device == DEVICE_MAIN_MIC) {
             /* Listen back Main-Mic case channels set to 8 to match seriallif channels */
             pcmconfig.channels = MEDIA_8_CHANNELS; // required to match seriallif channels
