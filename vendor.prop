@@ -48,6 +48,9 @@ ro.crypto.volume.metadata.method=dm-default-key
 # IncrementalFS
 ro.incremental.enable=true
 
+# Media
+debug.stagefright.c2inputsurface=-1
+
 ## Power HAL
 vendor.powerhal.disp.idle_support=false
 
