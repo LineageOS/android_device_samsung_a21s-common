@@ -52,6 +52,24 @@
       "parentUuid": "770429f7_aefebdd5",
       "revId": "2b550d340e6284c952f85994f29dfcb9b6d08400",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1d60dab1_f9c569da",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 11883
+      },
+      "writtenOn": "2025-01-15T17:45:13Z",
+      "side": 1,
+      "message": "He was specifically asking about the .conf removal, which looks suspicious and not related to the hidl libs",
+      "parentUuid": "3c291408_4b9fa79b",
+      "revId": "2b550d340e6284c952f85994f29dfcb9b6d08400",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
