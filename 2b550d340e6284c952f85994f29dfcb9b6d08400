@@ -34,6 +34,24 @@
       "parentUuid": "e701246e_9d2bdb28",
       "revId": "2b550d340e6284c952f85994f29dfcb9b6d08400",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "3c291408_4b9fa79b",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2025-01-15T17:03:21Z",
+      "side": 1,
+      "message": "Sorry for not responding, by itself this commit looks a bit strange but there is a corresponding device tree commit which justifies this\n\nhttps://github.com/LineageOS/android_device_samsung_a21s/commit/78a0f9c62fa7e03184c8f8912fd115f7df467eef\n\nAnd the configs were removed as they were the same as the stock/Linage configs.",
+      "parentUuid": "770429f7_aefebdd5",
+      "revId": "2b550d340e6284c952f85994f29dfcb9b6d08400",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
