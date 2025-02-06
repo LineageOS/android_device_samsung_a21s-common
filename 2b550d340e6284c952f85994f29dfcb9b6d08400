@@ -88,6 +88,24 @@
       "parentUuid": "1d60dab1_f9c569da",
       "revId": "2b550d340e6284c952f85994f29dfcb9b6d08400",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "fc9524cd_f65b99b5",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 17401
+      },
+      "writtenOn": "2025-02-06T00:58:09Z",
+      "side": 1,
+      "message": "i am pretty sure they are needed, the hal you are building even references them, ```stricted@r9 ~/a/lineage-22 $ cd hardware/samsung/nfc/\nstricted@r9 ~/a/l/h/s/nfc ((no branch))$ rg .conf\nhalimpl/src/util.cc\n27:/* START [H17080801] HAL config file path */\n28:#define CFG_FILE_1 \"/vendor/etc/libnfc-sec-vendor.conf\"\n29:#define CFG_FILE_2 \"/etc/libnfc-sec-vendor.conf\"\n``` and the other commit https://review.lineageos.org/c/LineageOS/android_device_samsung_a21s/+/415519/2/proprietary-files.txt still pretty much uses all proprietary bits, you should really add the configs back and decide if you want to use the oss impl or the proprietary blobs instead of this weird mixing between them,",
+      "parentUuid": "b0299c8e_5d2e14ef",
+      "revId": "2b550d340e6284c952f85994f29dfcb9b6d08400",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ],
   "submitRequirementResults": []
