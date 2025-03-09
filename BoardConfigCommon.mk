@@ -121,9 +121,6 @@ TARGET_KERNEL_CLANG_PATH := $(abspath .)/prebuilts/clang/kernel/$(HOST_PREBUILT_
 # A/B
 AB_OTA_UPDATER := false
 
-## Keymaster
-TARGET_KEYMASTER_VARIANT := samsung
-
 ## Manifest
 # HIDL
 DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
