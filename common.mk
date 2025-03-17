@@ -19,6 +19,9 @@ COMMON_PATH := device/samsung/a21s-common
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/a21s-common/a21s-common-vendor.mk)
 
+# Soong namespaces
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
 PRODUCT_CHARACTERISTICS := phone
 
 # Audio
@@ -66,6 +69,8 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
+    libGrallocMapperCamera \
+    libhwjpeg \
     libsensorndkbridge \
     libion.vendor \
     libutilscallstack.vendor \
@@ -91,14 +96,11 @@ PRODUCT_PACKAGES += \
 
 # Display
 PRODUCT_PACKAGES += \
+    android.hardware.composer.hwc3-service.slsi \
     android.hardware.graphics.allocator@2.0-impl:64 \
     android.hardware.graphics.allocator@2.0-service \
-    android.hardware.graphics.composer@2.2-service \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
-    libshim_ui
-
-PRODUCT_PACKAGES += \
-    libdrm.vendor
+    libion
 
 # Dynamic Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -169,10 +171,6 @@ PRODUCT_PACKAGES += \
     libshim_crypto:64 \
     libssl-tm
 
-# Lights
-PRODUCT_PACKAGES += \
-    android.hardware.light-service.samsung
-
 # Media
 PRODUCT_COPY_FILES += \
     frameworks/av/media/libstagefright/data/media_codecs_google_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_google_audio.xml \
@@ -185,8 +183,18 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
-    libepicoperator \
-    libstagefright_softomx_plugin.vendor
+    libstagefrighthw \
+    libExynosOMX_Core \
+    libExynosOMX_Resourcemanager \
+    libOMX.Exynos.AVC.Decoder \
+    libOMX.Exynos.AVC.Encoder \
+    libOMX.Exynos.HEVC.Decoder \
+    libOMX.Exynos.HEVC.Encoder \
+    libOMX.Exynos.MPEG4.Decoder \
+    libOMX.Exynos.MPEG4.Encoder \
+    libOMX.Exynos.VP8.Decoder \
+    libOMX.Exynos.VP8.Encoder \
+    libOMX.Exynos.WMV.Decoder
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
