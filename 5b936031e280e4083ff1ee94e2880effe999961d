@@ -34,6 +34,24 @@
       "parentUuid": "4a73835e_61fbc2b0",
       "revId": "5b936031e280e4083ff1ee94e2880effe999961d",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "5b40e0dd_420f3063",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 26928
+      },
+      "writtenOn": "2025-04-05T10:24:47Z",
+      "side": 1,
+      "message": "well, the build/soong patch didn\u0027t worked on my device thats why I ended up using DUMMY_SHARED_LIB.",
+      "parentUuid": "41d21c55_5600f1bb",
+      "revId": "5b936031e280e4083ff1ee94e2880effe999961d",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
