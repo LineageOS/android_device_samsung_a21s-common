@@ -61,6 +61,22 @@ SOONG_CONFIG_samsungCameraVars += extra_ids
 # ID=54 is macro
 SOONG_CONFIG_samsungCameraVars_extra_ids := 52,54
 
+$(call soong_config_set,exynos_camera,back_camera_rotation,90)
+$(call soong_config_set,exynos_camera,front_camera_rotation,270)
+$(call soong_config_set,exynos_camera,secure_camera_rotation,0)
+
+$(call soong_config_set,exynos_camera,use_dual_camera,true)
+$(call soong_config_set,exynos_camera,uses_camera_solution_vdis,true)
+$(call soong_config_set,exynos_camera,uses_slsi_plugin,true)
+$(call soong_config_set,exynos_camera,use_pipe_handler,true)
+# $(call soong_config_set,exynos_camera,uses_hifi_lls_capture,true)
+# $(call soong_config_set,exynos_camera,uses_hifi_capture,true)
+$(call soong_config_set,exynos_camera,uses_slsi_vendor_tags,true)
+$(call soong_config_set,exynos_camera,uses_remosaic_sensor,true)
+$(call soong_config_set,exynos_camera,uses_sensor_listener,true)
+
+$(call soong_config_set,exynos_camera,target_soc_base,exynos3830)
+
 ## Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
 TARGET_SCREEN_DENSITY := 280

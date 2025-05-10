@@ -65,30 +65,22 @@ vendor/firmware/dax_param.bin
 vendor/etc/wifi/mx140_bt.hcf
 
 # Camera
-vendor/lib/hw/camera.exynos850.so
-vendor/lib/libexynoscamera_plugin.so
 vendor/lib/libremosaic_wrapper.so
-vendor/lib64/hw/camera.exynos850.so
-vendor/lib64/libexynoscamera_plugin.so
 vendor/lib64/libremosaic_wrapper.so
 
 # Camera dependencies
 vendor/lib/libSEF.quram.so
-vendor/lib/libexynoscamera3.so
-vendor/lib/libexynoscamera_tdnr_plugin.so
+# vendor/lib/libexynoscamera_tdnr_plugin.so
 vendor/lib/libmfb.so
 vendor/lib/libsensorlistener.so
 vendor/lib/libuniapi.so
 vendor/lib/libuniplugin.so
-vendor/lib/vendor.samsung.hardware.thermal@1.0.so
 vendor/lib64/libSEF.quram.so
-vendor/lib64/libexynoscamera3.so
-vendor/lib64/libexynoscamera_tdnr_plugin.so
+# vendor/lib64/libexynoscamera_tdnr_plugin.so
 vendor/lib64/libmfb.so
 vendor/lib64/libsensorlistener.so
 vendor/lib64/libuniapi.so
 vendor/lib64/libuniplugin.so
-vendor/lib64/vendor.samsung.hardware.thermal@1.0.so
 vendor/etc/btcon.json
 
 # Charger Firmware

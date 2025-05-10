@@ -71,7 +71,10 @@ PRODUCT_COPY_FILES += \
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung \
-    libGrallocMapperCamera
+    libGrallocMapperCamera \
+    camera.universal3830 \
+    libexynoscamera3 \
+    libexynoscamera_plugin
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -269,7 +272,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung \
     hardware/samsung_slsi/libbt \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
-    hardware/samsung_slsi-linaro/exynos/cpboot_v3
+    hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
+    hardware/samsung_slsi-linaro/camera/N23
 
 # Thermal
 PRODUCT_PACKAGES += \
