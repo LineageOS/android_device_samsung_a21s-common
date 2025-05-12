@@ -1,4 +1,22 @@
 {
-  "comments": [],
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8bc8c08d_cdb78197",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-05-12T17:14:32Z",
+      "side": 1,
+      "message": "Next time, do not go and insta-merge. Not only you didn\u0027t keep the original commit metadata and change-ID (proper one: https://review.lineageos.org/q/I2eff39e83b9673aa2989d05de65c646241ba61da), but also didn\u0027t apply the change properly.\n\nIf I had seen this in time, I would have blocked this change.",
+      "revId": "68505c2af74abe036a7598d797e891883717983e",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ],
   "submitRequirementResults": []
 }
