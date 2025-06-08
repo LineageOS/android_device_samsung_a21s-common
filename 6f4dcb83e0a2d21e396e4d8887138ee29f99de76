@@ -16,6 +16,24 @@
       "message": "Why did you create a new change?",
       "revId": "6f4dcb83e0a2d21e396e4d8887138ee29f99de76",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "ea7a5616_f44181cf",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2025-06-08T12:40:12Z",
+      "side": 1,
+      "message": "idk, ig im just bad with gerrit :)",
+      "parentUuid": "4a94612a_f656d109",
+      "revId": "6f4dcb83e0a2d21e396e4d8887138ee29f99de76",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
