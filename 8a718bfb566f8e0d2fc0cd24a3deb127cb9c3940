@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "cc557d94_c671807a",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2025-06-08T12:01:16Z",
+      "side": 1,
+      "message": "Not until you confirm that any of the interfaces is registered and works.",
+      "revId": "8a718bfb566f8e0d2fc0cd24a3deb127cb9c3940",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
