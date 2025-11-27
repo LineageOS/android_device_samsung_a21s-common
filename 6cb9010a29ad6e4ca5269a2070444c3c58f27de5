@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "d9072a79_6e68c7b9",
+        "filename": "lineage.dependencies",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 4550
+      },
+      "writtenOn": "2025-11-27T18:14:44Z",
+      "side": 1,
+      "message": "No alphabetical sorting?",
+      "revId": "6cb9010a29ad6e4ca5269a2070444c3c58f27de5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
