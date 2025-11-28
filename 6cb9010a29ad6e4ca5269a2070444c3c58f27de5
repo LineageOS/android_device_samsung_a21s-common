@@ -16,6 +16,24 @@
       "message": "No alphabetical sorting?",
       "revId": "6cb9010a29ad6e4ca5269a2070444c3c58f27de5",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "38dd70b7_2df0202b",
+        "filename": "lineage.dependencies",
+        "patchSetId": 4
+      },
+      "lineNbr": 11,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2025-11-28T14:46:53Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "d9072a79_6e68c7b9",
+      "revId": "6cb9010a29ad6e4ca5269a2070444c3c58f27de5",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
