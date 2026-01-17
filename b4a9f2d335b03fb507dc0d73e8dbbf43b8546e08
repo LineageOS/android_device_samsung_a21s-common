@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b3b538d_02130269",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35850
+      },
+      "writtenOn": "2026-01-17T19:52:09Z",
+      "side": 1,
+      "message": "Since this platform doesn\u0027t have C2, this will kill hardware encoding.",
+      "revId": "b4a9f2d335b03fb507dc0d73e8dbbf43b8546e08",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
