@@ -16,6 +16,24 @@
       "message": "```suggestion\n$(call soong_config_set,samsungCameraVars,extra_ids,\"52,54\") # ID\u003d52 is depth camera and ID\u003d54 is macro\n```",
       "revId": "762ea5e559301a02d5f213f2e9fd1c669af740d8",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "88eb1f63_dad94e31",
+        "filename": "BoardConfigCommon.mk",
+        "patchSetId": 1
+      },
+      "lineNbr": 60,
+      "author": {
+        "id": 13648
+      },
+      "writtenOn": "2026-01-18T20:53:42Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7bb73cbd_cbc96d17",
+      "revId": "762ea5e559301a02d5f213f2e9fd1c669af740d8",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
