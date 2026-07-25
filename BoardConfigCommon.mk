@@ -151,6 +151,7 @@ BOARD_DTBO_CFG := $(COMMON_PATH)/configs/kernel/$(TARGET_DEVICE).cfg
 
 ## Properties
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor.prop
+TARGET_PRODUCT_PROP += $(COMMON_PATH)/product.prop
 
 ## Recovery
 BOARD_INCLUDE_RECOVERY_DTBO := true
@@ -176,6 +177,7 @@ include device/lineage/sepolicy/libion/sepolicy.mk
 include device/samsung_slsi/sepolicy/sepolicy.mk
 
 BOARD_VENDOR_SEPOLICY_DIRS += $(COMMON_PATH)/sepolicy/vendor
+SYSTEM_EXT_PRIVATE_SEPOLICY_DIRS += packages/modules/ImsMedia/sepolicy/system_ext/private
 
 ## USB
 $(call soong_config_set,samsungUsbGadgetVars,gadget_name,13600000.dwc3)
