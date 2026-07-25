@@ -257,6 +257,15 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
+# AOSP userspace IMS and framework bearer services
+$(call inherit-product, packages/modules/ImsMedia/imsmedia.mk)
+$(call soong_config_set,imsstack_namespace,use_carrier_config_ext,true)
+
+PRODUCT_PACKAGES += \
+    ImsStack \
+    Iwlan \
+    QualifiedNetworksService
+
 # Sensors
 PRODUCT_PACKAGES += \
     android.hardware.sensors-service.samsung-multihal
@@ -270,7 +279,8 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/samsung_slsi/libbt \
     hardware/samsung_slsi-linaro/exynos/gralloc/gralloc3 \
     hardware/samsung_slsi-linaro/exynos/libaudio/audiohal_comv1 \
-    hardware/samsung_slsi-linaro/exynos/cpboot_v3
+    hardware/samsung_slsi-linaro/exynos/cpboot_v3 \
+    vendor/lineage/imsstack-carrier-config-ext
 
 # Thermal
 PRODUCT_PACKAGES += \
