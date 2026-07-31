@@ -125,7 +125,6 @@ vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
 vendor/lib64/libfloatingfeature.so
-vendor/lib64/libvkmanager_vendor.so
 
 ## RIL - from a14 - A145FXXS8CXJ2
 vendor/bin/hw/rild|006374bbdd818b1d6ee83617ddabbf4073974e0e
