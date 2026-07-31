@@ -126,7 +126,6 @@ vendor/etc/plmn_delta_attaio.bin
 vendor/etc/plmn_delta_hktw.bin
 vendor/etc/plmn_delta_usagsm.bin
 vendor/etc/plmn_se13.bin
-vendor/lib64/libengmode_client.so
 vendor/lib64/libfloatingfeature.so
 vendor/lib64/libvkmanager_vendor.so
 
