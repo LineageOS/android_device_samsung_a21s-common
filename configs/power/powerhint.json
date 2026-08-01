@@ -4,6 +4,7 @@
             "Name": "CPUNormalClusterMinFreq",
             "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
             "Values": [
+                "-1",
                 "2002000",
                 "1456000",
                 "1053000",
@@ -16,6 +17,7 @@
             "Name": "CPUNormalClusterMaxFreq",
             "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
             "Values": [
+                "-1",
                 "2002000",
                 "1742000",
                 "1456000",
@@ -29,6 +31,7 @@
             "Name": "MemFreq",
             "Path": "/sys/devices/platform/17000010.devfreq_mif/devfreq/17000010.devfreq_mif/scaling_devfreq_min",
             "Values": [
+                "-1",
                 "1539000",
                 "421000"
             ],
@@ -38,6 +41,7 @@
             "Name": "GPUMinFreq",
             "Path": "/sys/kernel/gpu/gpu_min_clock",
             "Values": [
+                "-1",
                 "598000",
                 "377000",
                 "156000",
@@ -50,6 +54,7 @@
             "Name": "GPUMaxFreq",
             "Path": "/sys/kernel/gpu/gpu_max_clock",
             "Values": [
+                "-1",
                 "598000",
                 "377000",
                 "156000"
@@ -61,6 +66,7 @@
             "Name": "CPUMaxFreq",
             "Path": "/sys/power/cpufreq_max_limit",
             "Values": [
+                "-1",
                 "2002000",
                 "0"
             ],
