@@ -16,6 +16,24 @@
       "message": "Some rogue tabs where spaces should be used",
       "revId": "9dfcdd7a4d02e6c4664cb02f8172f57af6230528",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a2a8f521_21fdcc39",
+        "filename": "configs/power/powerhint.json",
+        "patchSetId": 1
+      },
+      "lineNbr": 34,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2026-08-01T18:12:55Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "119e0d04_ac91ea04",
+      "revId": "9dfcdd7a4d02e6c4664cb02f8172f57af6230528",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
