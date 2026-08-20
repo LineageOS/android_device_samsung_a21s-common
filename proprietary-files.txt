@@ -99,14 +99,9 @@ vendor/lib64/hw/gatekeeper.exynos850.so
 # GPS
 vendor/bin/hw/gps.sh
 vendor/bin/hw/gpsd
-vendor/bin/hw/vendor.samsung.hardware.gnss@2.1-service
 vendor/etc/gnss/gps.cfg
 vendor/etc/init/init.gps.rc
-vendor/etc/init/vendor.samsung.hardware.gnss@2.1-service.rc
 vendor/lib64/hw/android.hardware.gnss@2.1-impl.so;FIX_SONAME
-vendor/lib64/hw/vendor.samsung.hardware.gnss@2.1-impl.so;FIX_SONAME
-vendor/lib64/vendor.samsung.hardware.gnss@2.0.so
-vendor/lib64/vendor.samsung.hardware.gnss@2.1.so
 vendor/lib64/libwrappergps.so
 vendor/etc/gnss/ca.pem
 vendor/etc/gnss/deleteLogCommands
