@@ -92,10 +92,6 @@ vendor/firmware/setfile_hi1336.bin
 vendor/firmware/tdnr_HI1336.json
 vendor/firmware/tdnr_S5K4HA.json
 
-# Gatekeeper
-vendor/lib/hw/gatekeeper.exynos850.so
-vendor/lib64/hw/gatekeeper.exynos850.so
-
 # GPS
 vendor/bin/hw/gps.sh
 vendor/bin/hw/gpsd
