@@ -25,7 +25,11 @@ PRODUCT_PACKAGES += \
     audio.bluetooth.default \
     audio.r_submix.default \
     audio.usb.default \
-    audio.primary.universal3830
+    audio.primary.universal3830 \
+    libsamsungSoundbooster_plus \
+    SoundBoosterStage
+
+$(call soong_config_set,samsungAudioVars,soundbooster_dsp_library,//vendor/samsung/a21s-common:lib_SoundBooster_ver1050)
 
 # Mixer
 PRODUCT_COPY_FILES += \

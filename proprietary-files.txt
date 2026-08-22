@@ -14,6 +14,11 @@ vendor/lib/libsecaudiocoreutils.so
 vendor/lib64/libprofileparamstorage.so
 vendor/lib64/libsecaudiocoreutils.so
 
+# Audio (SoundBooster)
+vendor/etc/SoundBoosterParam.txt
+vendor/lib/lib_SoundBooster_ver1050.so
+vendor/lib64/lib_SoundBooster_ver1050.so
+
 # Audio Firmware
 vendor/firmware/AP_AUDIO_SLSI.bin
 vendor/firmware/APDV_AUDIO_SLSI.bin
