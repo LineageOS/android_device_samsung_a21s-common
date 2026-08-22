@@ -29,7 +29,8 @@
         <library name="loudness_enhancer" path="libldnhncr.so"/>
         <library name="dynamics_processing" path="libdynproc.so"/>
         <library name="pre_processing" path="libaudiopreprocessing.so" />
-        <library name="dap" path="libswdap.so"/>
+		<library name="dap" path="libswdap.so"/>
+        <library name="soundbooster_plus" path="libsamsungSoundbooster_plus.so"/>
     </libraries>
 
     <!-- list of effects to load.
@@ -87,7 +88,8 @@
             <libsw library="dap" uuid="6ab06da4-c516-4611-8166-452799218539"/>
             <libhw library="offload" uuid="a0c30891-8246-4aef-b8ad-d53e26da0253"/>
         </effectProxy>
-        <effect name="volumemonitor_hw" library="offload" uuid="052a63b0-f95a-11e9-8f0b-362b9e155667"/>
+		<effect name="volumemonitor_hw" library="offload" uuid="052a63b0-f95a-11e9-8f0b-362b9e155667"/>
+        <effect name="soundbooster_plus" library="soundbooster_plus" uuid="50de45f0-5d4c-11e5-a837-0800200c9a66"/>
     </effects>
 
     <!-- Audio pre processor configurations.
