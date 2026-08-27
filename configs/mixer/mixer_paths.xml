@@ -1244,7 +1244,7 @@
 	</path>
 
 	<path name="media-mic">
-		<path name="dev-dual-mic" />
+		<path name="dev-main-mic" />
 		<path name="route-ap-record" />
 	</path>
 
@@ -1275,7 +1275,7 @@
 
 	<!-- Voice Recording paths -->
 	<path name="recording-mic">
-		<path name="media-mic" />
+		<path name="media-dualmic" />
 	</path>
 
 	<path name="recording-2nd-mic">
@@ -1301,7 +1301,7 @@
 
 	<!-- Camcording paths -->
 	<path name="camcorder-mic">
-		<path name="media-mic" />
+		<path name="media-dualmic" />
 	</path>
 
 	<path name="camcorder-2nd-mic">
@@ -2742,11 +2742,13 @@
 
 	<!-- recognition input volume -->
 	<path name="gain-recognition-mic">
-		<path name="gain-media-mic" />
+		<ctl name="ADC Left Gain" value="145" />
+		<ctl name="ADC Right Gain" value="145" />
 	</path>
 
 	<path name="gain-recognition-2nd-mic">
-		<path name="gain-media-2nd-mic" />
+		<ctl name="ADC Left Gain" value="145" />
+		<ctl name="ADC Right Gain" value="145" />
 	</path>
 
 	<path name="gain-recognition-headset-mic">
