@@ -6,6 +6,11 @@
 
 soong_namespace {
     imports: [
-        "vendor/samsung/a21s-common",
+        "vendor/samsung/a21s-common"
     ],
+}
+
+cc_library_headers {
+    name: "audio_proxy_headers",
+    export_include_dirs: ["include"],
 }
