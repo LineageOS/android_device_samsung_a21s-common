@@ -23,8 +23,13 @@ TARGET_2ND_CPU_VARIANT := generic
 
 ## Audio
 $(call soong_config_set,android_hardware_audio,run_64bit,true)
-$(call soong_config_set,exynos_audio,PREDEFINED_LOW_CAPTURE_DURATION,20)
-$(call soong_config_set,exynos_audio,PROXY_LIBRARY,//device/samsung/a21s-common:libaudioproxy)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_param_update,false)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_samsungrecord,true)
+$(call soong_config_set_bool,exynos_audio,use_sec_audio_support_listenback_dspeffect,true)
+$(call soong_config_set,exynos_audio,predefined_low_capture_duration,20)
+$(call soong_config_set,exynos_audio,predefined_usb_playback_duration,5)
+$(call soong_config_set,exynos_audio,proxy_header,//$(COMMON_PATH):audio_proxy_headers)
+$(call soong_config_set,exynos_audio,sec_resampler_library,//vendor/samsung/a21s-common:libSamsungPostProcessConvertor)
 
 ## Boot Image
 BOARD_BOOTIMG_HEADER_VERSION := 2
