@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "2e69c969_494c4123",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 35850
+      },
+      "writtenOn": "2026-08-29T15:25:34Z",
+      "side": 1,
+      "message": "How can lowering the size make it have enough space for metadata?",
+      "revId": "69db05121b0145a242baf7a2aa287a2e5ae28836",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
