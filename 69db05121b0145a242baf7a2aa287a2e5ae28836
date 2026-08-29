@@ -16,6 +16,24 @@
       "message": "How can lowering the size make it have enough space for metadata?",
       "revId": "69db05121b0145a242baf7a2aa287a2e5ae28836",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "df1411b5_8ce3c043",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2026-08-29T16:15:49Z",
+      "side": 1,
+      "message": "BOARD_SUPER_PARTITION_SIZE - BOARD_SAMSUNG_DYNAMIC_PARTITIONS_SIZE",
+      "parentUuid": "2e69c969_494c4123",
+      "revId": "69db05121b0145a242baf7a2aa287a2e5ae28836",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
