@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "2955fd80_e139635a",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 1
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 36705
+      },
+      "writtenOn": "2026-08-29T18:46:26Z",
+      "side": 1,
+      "message": "I think you meant \"dates\"",
+      "range": {
+        "startLine": 7,
+        "startChar": 57,
+        "endLine": 7,
+        "endChar": 61
+      },
+      "revId": "d9dba7c646c2a9415d7c3bc0ea7885236220a152",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
