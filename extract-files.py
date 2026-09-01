@@ -37,9 +37,6 @@ lib_fixups: lib_fixups_user_type = {
 } # fmt: skip
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/libsec-ril.so': blob_fixup()
-	.sig_replace('80 0E 40 F9 E1 03 16 AA 82 0C 80 52 E3 03 15 AA',
-            '80 0E 40 F9 E1 03 16 AA 82 0C 80 52 08 00 80 D2'),
     'vendor/lib64/libcrypto-tm.so': blob_fixup()
         .replace_needed('libssl.so', 'libssl-tm.so'),
     (
