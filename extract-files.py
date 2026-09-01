@@ -61,6 +61,11 @@ blob_fixups: blob_fixups_user_type = {
     ) : blob_fixup()
         .add_needed('libutils-v32.so')
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
+    'vendor/lib64/libsec-ril-impl.so': blob_fixup()
+        # Change fallback value of ro.build.version.oneui in SimManager (3 matches)
+        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 61 58 9D 52')
+        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 61 58 9D 52')
+        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 61 58 9D 52'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
