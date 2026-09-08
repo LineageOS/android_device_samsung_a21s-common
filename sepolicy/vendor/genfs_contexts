@@ -75,7 +75,6 @@ genfscon sysfs /devices/platform/12c80000.mfc/video4linux/video11/name          
 genfscon sysfs /kernel/ems/emstune/req_mode                                                                                u:object_r:sysfs_ems_writable:s0
 
 # GPU
-genfscon sysfs /kernel/gpu/gpu_freq_table                                                                               u:object_r:sysfs_gpu:s0
 genfscon sysfs /kernel/gpu/gpu_max_clock                                                                                u:object_r:sysfs_gpu_writable:s0
 
 # Kernel
