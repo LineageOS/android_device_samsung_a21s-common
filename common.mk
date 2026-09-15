@@ -133,6 +133,9 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/configs/init/init.recovery.exynos850.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos850.rc \
     $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
+# IMS
+$(call inherit-product, hardware/lineage/generic-ims/ims.mk)
+
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
 
