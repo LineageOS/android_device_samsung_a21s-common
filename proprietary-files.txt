@@ -226,6 +226,7 @@ vendor/etc/wifi/mx140_wlan.hcf
 vendor/etc/wifi/mx140_wlan_sw.hcf
 vendor/etc/wifi/mx140_wlan_t.hcf
 vendor/etc/wifi/mx140_wlan_t_sw.hcf
+vendor/etc/wifi/p2p_supplicant_overlay.conf
 vendor/etc/wifi/platform.txt
 vendor/etc/wifi/slsi_reg_database.bin
 
