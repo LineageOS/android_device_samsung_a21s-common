@@ -59,11 +59,6 @@ vendor.powerhal.disp.idle_support=false
 # If not set or set to 0, OMX will only use BT.601 colorspace.
 ro.vendor.cscsupported=1
 
-# RIL
-ro.product_ship=true
-ro.telephony.default_network=9,9
-vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
-
 ## SoC
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 850
