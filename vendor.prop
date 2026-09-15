@@ -54,11 +54,6 @@ ro.crypto.volume.metadata.method=dm-default-key
 # Power HAL
 vendor.powerhal.disp.idle_support=false
 
-# RIL
-ro.product_ship=true
-ro.telephony.default_network=9,9
-vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
-
 # Samsung specific
 # Set csc support in OMX
 # If not set or set to 0, OMX will only use BT.601 colorspace.
