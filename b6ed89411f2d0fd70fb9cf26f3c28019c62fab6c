@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a30c42b7_87c55797",
+        "filename": "proprietary-files.txt",
+        "patchSetId": 1
+      },
+      "lineNbr": 17,
+      "author": {
+        "id": 36705
+      },
+      "writtenOn": "2026-09-16T16:15:44Z",
+      "side": 1,
+      "message": "It\u0027s \"SoundBooster\"",
+      "range": {
+        "startLine": 17,
+        "startChar": 9,
+        "endLine": 17,
+        "endChar": 22
+      },
+      "revId": "b6ed89411f2d0fd70fb9cf26f3c28019c62fab6c",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
