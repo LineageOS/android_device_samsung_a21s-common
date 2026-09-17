@@ -37,8 +37,11 @@ lib_fixups: lib_fixups_user_type = {
 } # fmt: skip
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/lib64/libcrypto-tm.so': blob_fixup()
-        .replace_needed('libssl.so', 'libssl-tm.so'),
+    'vendor/bin/hw/gpsd': blob_fixup()
+        .binary_regex_replace(b'libcrypto.so', b'libcryptx.so')
+        .binary_regex_replace(b'libssl.so', b'libssx.so'),
+    'vendor/lib64/libssx.so': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcryptx.so'),
     (
     'vendor/lib/libsensorlistener.so',
     'vendor/lib64/libsensorlistener.so',
@@ -48,7 +51,7 @@ blob_fixups: blob_fixups_user_type = {
         'vendor/lib64/libkeymaster_helper.so',
         'vendor/lib64/libskeymaster4device.so',
     ) : blob_fixup()
-        .replace_needed('libcrypto.so', 'libcrypto-tm.so')
+        .replace_needed('libcrypto.so', 'libcryptx.so')
         .add_needed('libshim_crypto.so'),
     (
         'vendor/lib/sensors.grip.so',

@@ -195,8 +195,9 @@ vendor/etc/init/teegris_v4.rc
 vendor/lib/libteecl.so
 vendor/lib64/libteecl.so
 
-# VNDK - from prebuilts/vndk/v32 - android-15.0.0_r20
-vendor/lib64/libcrypto-tm.so;FIX_SONAME|8d9f1c579d9b947539919c95351a4a2c365860de|285b597b3f1adff0fe1f6c5d10d4fdd90b8e5e54
+# VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
+vendor/lib64/libcrypto.so:vendor/lib64/libcryptx.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|b52c4b61615d4a2a9a40a8514ec305556c28e2b8
+vendor/lib64/libssl.so:vendor/lib64/libssx.so;FIX_SONAME|25d0fcea69b588a9a2eedd8549f62920c92e371f|358cb9bdde9d7dae558efd7fe1a4f456dcfea405
 
 # Sensors
 vendor/etc/sensors/hals.conf
