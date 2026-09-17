@@ -13,6 +13,6 @@ cc_library_shared {
     },
     srcs: ["crypto.c"],
     compile_multilib: "64",
-    shared_libs: ["libcrypto-tm"],
+    shared_libs: ["libcryptx"],
     vendor: true,
 }
