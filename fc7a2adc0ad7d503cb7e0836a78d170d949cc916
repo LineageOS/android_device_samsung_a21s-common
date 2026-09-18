@@ -35,6 +35,24 @@
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "0a3daa56_66267a3c",
+        "filename": "configs/audio/audio_effects.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2026-09-18T16:35:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7f0198d2_595985e7",
+      "revId": "fc7a2adc0ad7d503cb7e0836a78d170d949cc916",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "1197df50_9e06b1ff",
@@ -48,6 +66,24 @@
       "writtenOn": "2026-09-18T12:16:39Z",
       "side": 1,
       "message": "Unnecessary indentation modification",
+      "revId": "fc7a2adc0ad7d503cb7e0836a78d170d949cc916",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "1a0ca2a6_1b23e0bd",
+        "filename": "configs/audio/audio_effects.xml",
+        "patchSetId": 2
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2026-09-18T16:35:54Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1197df50_9e06b1ff",
       "revId": "fc7a2adc0ad7d503cb7e0836a78d170d949cc916",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
