@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "d1a99e0d_da92c14d",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 3
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 36705
+      },
+      "writtenOn": "2026-09-18T16:37:35Z",
+      "side": 1,
+      "message": "You may want to grab 500610 and 500611 instead. They contain a more cleaned up version of the shim that does not contain workarounds. Just a suggestion from me.",
+      "revId": "b78c04616584a8ca5b60274021540348a2428e77",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    }
+  ]
+}
