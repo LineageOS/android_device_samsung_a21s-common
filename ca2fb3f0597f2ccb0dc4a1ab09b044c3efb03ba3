@@ -16,6 +16,24 @@
       "message": "This is the diff between in tree and generated wpa_supplicant.conf\n```\ndiff --git a/configs/wifi/wpa_supplicant.conf b/home/Maja/android/lineage-24.0/out/target/product/a53x/vendor/etc/wifi/wpa_supplicant.conf\nindex 4d05858..a6c4a75 100644\n--- a/configs/wifi/wpa_supplicant.conf\n+++ b/home/Maja/android/lineage-24.0/out/target/product/a53x/vendor/etc/wifi/wpa_supplicant.conf\n@@ -2,4 +2,11 @@ update_config\u003d1\n eapol_version\u003d1\n ap_scan\u003d1\n fast_reauth\u003d1\n+pmf\u003d1\n p2p_add_cli_chan\u003d1\n+oce\u003d1\n+sae_pwe\u003d2\n+p2p_optimize_listen_chan\u003d1\n+wowlan_disconnect_on_deinit\u003d1\n+rsn_overriding\u003d1\n+wowlan_triggers\u003dmagic_pkt\n```\nI\u0027m unsure if there is something that is possibly breaking something",
       "revId": "ca2fb3f0597f2ccb0dc4a1ab09b044c3efb03ba3",
       "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "3b1bf67b_4024817f",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 34512
+      },
+      "writtenOn": "2026-09-23T19:22:15Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "e1a45330_c144c89c",
+      "revId": "ca2fb3f0597f2ccb0dc4a1ab09b044c3efb03ba3",
+      "serverId": "1ec6b3db-b2c1-4fa4-84a2-4c7efe89ba71"
     }
   ]
 }
