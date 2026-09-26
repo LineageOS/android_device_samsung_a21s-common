@@ -13,25 +13,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-soong_config_module_type {
-    name: "audioproxy",
-    module_type: "cc_defaults",
-    config_namespace: "exynos850AudioVars",
-    bool_variables: [
-        "use_direct_rcvspk_path",
-        "use_dual_speaker",
-        "use_soundtrigger_hal",
-        "use_spkamp_playback",
-        "use_quad_mic",
-        "use_quad_mic_camcorder",
-    ],
-    properties: [
-        "cflags",
-        "shared_libs",
-        "srcs",
-    ],
-}
-
 cc_library_shared {
     name: "libaudioproxy",
     vendor: true,
@@ -57,9 +38,7 @@ cc_library_shared {
         "libexpat",
     ],
     cflags: [
-        "-Wno-unused-parameter",
-        "-Wno-unused-variable",
-        "-Wno-unused-function",
+        "-DNO_USE_DEBUGFS",
         "-DSUPPORT_MCD_FEATURE",
     ],
 }
