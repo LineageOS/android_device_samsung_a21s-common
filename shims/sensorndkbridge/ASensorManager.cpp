@@ -12,9 +12,9 @@ using android::Mutex;
 
 static Mutex gLock;
 
-extern "C" ALooper *ALooper_forCamera() {
+extern "C" ALooper* ALooper_forCamera() {
     LOG(VERBOSE) << "ALooper_forCamera";
-    ALooper *sLooper = NULL;
+    ALooper* sLooper = NULL;
 
     Mutex::Autolock autoLock(gLock);
     sLooper = new ALooper;
@@ -22,7 +22,7 @@ extern "C" ALooper *ALooper_forCamera() {
     return sLooper;
 }
 
-extern "C" int ALooper_release_forCamera(ALooper *sLooper) {
+extern "C" int ALooper_release_forCamera(ALooper* sLooper) {
     if (sLooper != nullptr) {
         Mutex::Autolock autoLock(gLock);
         delete sLooper;
@@ -31,11 +31,8 @@ extern "C" int ALooper_release_forCamera(ALooper *sLooper) {
     return 0;
 }
 
-extern "C" int ALooper_pollOnce_camera(ALooper *sLooper,
-                                       int timeoutMillis,
-                                       int* outFd,
-                                       int* outEvents,
-                                       void** outData) {
+extern "C" int ALooper_pollOnce_camera(ALooper* sLooper, int timeoutMillis, int* outFd,
+                                       int* outEvents, void** outData) {
     int res = sLooper->pollOnce(timeoutMillis, outFd, outEvents, outData);
     LOG(VERBOSE) << "ALooper_pollOnce_camera => " << res;
     return res;

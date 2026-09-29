@@ -6,7 +6,7 @@
 #include <utils/Thread.h>
 namespace utils32 {
 class Thread : public android::Thread {
-public:
+  public:
     android::status_t run(const char* name, int32_t priority, size_t stack);
 };
-} // namespace utils32
+}  // namespace utils32
