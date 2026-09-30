@@ -1,14 +1,14 @@
-## Adoptable Storage
+# Adoptable Storage
 ro.crypto.volume.options=aes-256-xts:aes-256-cts:v2
 
-## Audio
+# Audio
 audio.offload.min.duration.secs=30
 aaudio.mmap_policy=2
 aaudio.mmap_exclusive_policy=2
 aaudio.hw_burst_min_usec=2000
 af.fast_track_multiplier=1
 
-## Bluetooth
+# Bluetooth
 bluetooth.device.class_of_device=90,1,16
 bluetooth.device.default_name=Galaxy A21s
 bluetooth.profile.asha.central.enabled=true
@@ -26,14 +26,14 @@ bluetooth.profile.pan.panu.enabled=true
 bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 
-## Dalvik
-dalvik.vm.dex2oat64.enabled=true
-dalvik.vm.lockprof.threshold=500
-
 # Camera
 vendor.camera.aux.packageexcludelist=org.telegram.messenger,org.thunderdog.challegram,us.zoom.videomeetings
 
-## Graphics
+# Dalvik
+dalvik.vm.dex2oat64.enabled=true
+dalvik.vm.lockprof.threshold=500
+
+# Graphics
 debug.sf.latch_unsignaled=1
 ro.hardware.vulkan=mali
 ro.hardware.egl=mali
@@ -42,32 +42,32 @@ ro.surface_flinger.enable_frame_rate_override=false
 ro.surface_flinger.max_frame_buffer_acquired_buffers=3
 ro.surface_flinger.supports_background_blur=1
 
-## Metadata Encryption
+# IncrementalFS
+ro.incremental.enable=true
+
+# Metadata Encryption
 ro.crypto.dm_default_key.options_format.version=2
 # Call deleteAllKeys if vold detects a factory reset
 ro.crypto.metadata_init_delete_all_keys.enabled=true
 ro.crypto.volume.metadata.method=dm-default-key
 
-# IncrementalFS
-ro.incremental.enable=true
-
-## Power HAL
+# Power HAL
 vendor.powerhal.disp.idle_support=false
-
-## Samsung specific
-# Set csc support in OMX
-# If not set or set to 0, OMX will only use BT.601 colorspace.
-ro.vendor.cscsupported=1
 
 # RIL
 ro.product_ship=true
 ro.telephony.default_network=9,9
 vendor.sec.rild.libpath=/vendor/lib64/libsec-ril.so
 
-## SoC
+# Samsung specific
+# Set csc support in OMX
+# If not set or set to 0, OMX will only use BT.601 colorspace.
+ro.vendor.cscsupported=1
+
+# SoC
 ro.soc.manufacturer=Samsung
 ro.soc.model=Exynos 850
 
-## Wi-Fi
+# Wi-Fi
 wifi.direct.interface=p2p0
 ro.boot.wificountrycode=00

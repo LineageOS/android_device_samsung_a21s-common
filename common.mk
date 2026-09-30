@@ -3,57 +3,36 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-COMMON_PATH := device/samsung/a21s-common
-
-# Get non-open-source specific aspects
-$(call inherit-product, vendor/samsung/a21s-common/a21s-common-vendor.mk)
-
 # Enable project quotas and casefolding for emulated storage without sdcardfs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
-
-# Soong namespaces
-$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
-
-PRODUCT_CHARACTERISTICS := phone
 
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl \
-    android.hardware.audio@7.0-impl \
     android.hardware.audio.service \
+    android.hardware.audio@7.0-impl \
     android.hardware.bluetooth.audio-impl \
     audio.bluetooth.default \
+    audio.primary.universal3830 \
     audio.r_submix.default \
     audio.usb.default \
-    audio.primary.universal3830 \
     libsamsungSoundbooster_plus \
+    SamsungDAP \
     SoundBoosterStage
 
 $(call soong_config_set,samsungAudioVars,soundbooster_dsp_library,//vendor/samsung/a21s-common:lib_SoundBooster_ver1050)
 
-# Mixer
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/mixer/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
-
-# Dolby
-PRODUCT_PACKAGES += \
-    SamsungDAP
-
-# Doze
-PRODUCT_PACKAGES += \
-    SamsungDoze
-
-PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
+    $(LOCAL_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
+    frameworks/av/services/audiopolicy/config/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
     frameworks/av/services/audiopolicy/config/bluetooth_audio_policy_configuration_7_0.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_audio_policy_configuration_7_0.xml \
     frameworks/av/services/audiopolicy/config/default_volume_tables.xml:$(TARGET_COPY_OUT_VENDOR)/etc/default_volume_tables.xml \
     frameworks/av/services/audiopolicy/config/r_submix_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/r_submix_audio_policy_configuration.xml \
     frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_configuration.xml \
     frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_default_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_default_stream_volumes.xml \
     frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_product_strategies.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_product_strategies.xml \
-    frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_stream_volumes.xml \
-    $(COMMON_PATH)/configs/audio/audio_effects.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_effects.xml \
-    $(COMMON_PATH)/configs/audio/audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_configuration.xml \
-    $(COMMON_PATH)/configs/audio/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml
+    frameworks/av/services/audiopolicy/enginedefault/config/example/phone/audio_policy_engine_stream_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_engine_stream_volumes.xml
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -64,20 +43,11 @@ PRODUCT_PACKAGES += \
 
 # Camera
 PRODUCT_PACKAGES += \
-    android.hardware.camera.provider-service.samsung \
-    libGrallocMapperCamera
+    android.hardware.camera.provider-service.samsung
 
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
-
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.samsung
-
-# VIB
-PRODUCT_PACKAGES += \
-    android.hardware.vibrator-service.samsung
 
 # Display
 PRODUCT_PACKAGES += \
@@ -87,26 +57,34 @@ PRODUCT_PACKAGES += \
     android.hardware.graphics.mapper@2.0-impl-2.1 \
     gralloc.universal3830
 
-$(call soong_config_set_bool,libui,legacy_gralloc,true)
-
+# Doze
 PRODUCT_PACKAGES += \
-    libGrallocWrapper
-
-# Dynamic Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+    SamsungDoze
 
 # DRM
 PRODUCT_PACKAGES += \
     android.hardware.drm-service.clearkey
 
+# Dynamic Partitions
+PRODUCT_USE_DYNAMIC_PARTITIONS := true
+
+# Fingerprint
+PRODUCT_PACKAGES += \
+    android.hardware.biometrics.fingerprint-service.samsung
+
 # Gatekeeper
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper-service.teegris
 
-
 # GNSS
 PRODUCT_PACKAGES += \
     android.hardware.gnss@2.1-service.samsung
+
+# Gralloc
+PRODUCT_PACKAGES += \
+    libGrallocWrapper
+
+$(call soong_config_set_bool,libui,legacy_gralloc,true)
 
 # Graphics
 # Device uses high-density artwork where available
@@ -124,14 +102,14 @@ PRODUCT_PACKAGES += \
     libhwbinder \
     libhwbinder.vendor
 
-# init
+# Init
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/init/fstab.exynos850:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos850 \
-    $(COMMON_PATH)/configs/init/fstab.exynos850:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos850 \
-    $(COMMON_PATH)/configs/init/init.exynos850.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos850.rc \
-    $(COMMON_PATH)/configs/init/init.exynos850.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos850.usb.rc \
-    $(COMMON_PATH)/configs/init/init.recovery.exynos850.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos850.rc \
-    $(COMMON_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
+    $(LOCAL_PATH)/configs/init/fstab.exynos850:$(TARGET_COPY_OUT_RAMDISK)/fstab.exynos850 \
+    $(LOCAL_PATH)/configs/init/fstab.exynos850:$(TARGET_COPY_OUT_VENDOR)/etc/fstab.exynos850 \
+    $(LOCAL_PATH)/configs/init/init.exynos850.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos850.rc \
+    $(LOCAL_PATH)/configs/init/init.exynos850.usb.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/init.exynos850.usb.rc \
+    $(LOCAL_PATH)/configs/init/init.recovery.exynos850.rc:$(TARGET_COPY_OUT_RECOVERY)/root/init.recovery.exynos850.rc \
+    $(LOCAL_PATH)/configs/init/ueventd.rc:$(TARGET_COPY_OUT_VENDOR)/etc/ueventd.rc
 
 # ION
 $(call soong_config_set_bool,libion,legacy_impl,true)
@@ -152,11 +130,24 @@ PRODUCT_PACKAGES += \
 
 # Media
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
+    $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml
 
 # Memtrack
 PRODUCT_PACKAGES += \
     android.hardware.memtrack-service.samsung-mali
+
+# Mixer
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/configs/mixer/mixer_paths.xml:$(TARGET_COPY_OUT_VENDOR)/etc/mixer_paths.xml
+
+# NFC and Secure Element packages
+PRODUCT_PACKAGES += \
+    android.hardware.nfc-service.sec \
+    com.android.nfc_extras \
+    Tag
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/sku/permissions/unavail.android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_disabled/unavail.hardware.samsung.nfc.xml
 
 # OMX
 PRODUCT_PACKAGES += \
@@ -174,7 +165,7 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.WMV.Decoder
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(COMMON_PATH)/overlay
+DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Permissions
@@ -234,11 +225,11 @@ PRODUCT_PACKAGES += \
     android.hardware.power-service.pixel-libperfmgr
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+    $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
 
 # Public Libraries
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
+    $(LOCAL_PATH)/configs/linker/public.libraries.txt:$(TARGET_COPY_OUT_VENDOR)/etc/public.libraries.txt
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -248,7 +239,7 @@ PRODUCT_PACKAGES += \
     cbd
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
+    $(LOCAL_PATH)/configs/ril/sehradiomanager.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sehradiomanager.conf
 
 # Sensors
 PRODUCT_PACKAGES += \
@@ -256,7 +247,7 @@ PRODUCT_PACKAGES += \
 
 # Soong Namespaces
 PRODUCT_SOONG_NAMESPACES += \
-    $(COMMON_PATH) \
+    $(LOCAL_PATH) \
     hardware/google/interfaces \
     hardware/google/pixel/pixelstats \
     hardware/google/pixel/power-libperfmgr \
@@ -274,21 +265,16 @@ PRODUCT_PACKAGES += \
     thermal_symlinks
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
+    $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
 
 # USB
 PRODUCT_PACKAGES += \
     android.hardware.usb-service.samsung \
     android.hardware.usb.gadget-service.samsung
 
-# NFC and Secure Element packages
+# Vibrator
 PRODUCT_PACKAGES += \
-    android.hardware.nfc-service.sec \
-    com.android.nfc_extras \
-    Tag
-
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/sku/permissions/unavail.android.hardware.nfc.xml:$(TARGET_COPY_OUT_ODM)/etc/permissions/sku_disabled/unavail.hardware.samsung.nfc.xml
+    android.hardware.vibrator-service.samsung
 
 # WiFi
 PRODUCT_PACKAGES += \
@@ -299,6 +285,12 @@ PRODUCT_PACKAGES += \
     wpa_supplicant.conf
 
 PRODUCT_COPY_FILES += \
-    $(COMMON_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
+    $(LOCAL_PATH)/configs/wifi/wpa_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/wpa_supplicant_overlay.conf
 
 PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
+
+# Call Samsung LSI board support package makefiles
+$(call inherit-product, hardware/samsung_slsi-linaro/config/config.mk)
+
+# Call the proprietary setup
+$(call inherit-product, vendor/samsung/a21s-common/a21s-common-vendor.mk)
