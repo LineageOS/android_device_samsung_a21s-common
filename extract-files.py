@@ -40,13 +40,18 @@ blob_fixups: blob_fixups_user_type = {
     'vendor/bin/hw/gpsd': blob_fixup()
         .binary_regex_replace(b'libcrypto.so', b'libcryptx.so')
         .binary_regex_replace(b'libssl.so', b'libssx.so'),
-    'vendor/lib64/libssx.so': blob_fixup()
-        .replace_needed('libcrypto.so', 'libcryptx.so'),
+    'vendor/lib64/libsec-ril-impl.so': blob_fixup()
+        # Change fallback value of ro.build.version.oneui in SimManager (3 matches)
+        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 81 58 9D 52')
+        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 81 58 9D 52')
+        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 81 58 9D 52'),
     (
-    'vendor/lib/libsensorlistener.so',
-    'vendor/lib64/libsensorlistener.so',
+        'vendor/lib/libsensorlistener.so',
+        'vendor/lib64/libsensorlistener.so',
     ) : blob_fixup()
         .add_needed('libshim_sensorndkbridge.so'),
+    'vendor/lib64/libssx.so': blob_fixup()
+        .replace_needed('libcrypto.so', 'libcryptx.so'),
     (
         'vendor/lib64/libkeymaster_helper.so',
         'vendor/lib64/libskeymaster4device.so',
@@ -55,17 +60,12 @@ blob_fixups: blob_fixups_user_type = {
         .add_needed('libshim_crypto.so'),
     (
         'vendor/lib/sensors.grip.so',
-        'vendor/lib64/sensors.grip.so',
         'vendor/lib/sensors.sensorhub.so',
+        'vendor/lib64/sensors.grip.so',
         'vendor/lib64/sensors.sensorhub.so',
     ) : blob_fixup()
         .add_needed('libutils-v32.so')
         .binary_regex_replace(b'_ZN7android6Thread3runEPKcim', b'_ZN7utils326Thread3runEPKcim'),
-    'vendor/lib64/libsec-ril-impl.so': blob_fixup()
-        # Change fallback value of ro.build.version.oneui in SimManager (3 matches)
-        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 81 58 9D 52')
-        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 81 58 9D 52')
-        .sig_replace('00 A4 2E 91 E1 03 1F 2A', '00 A4 2E 91 81 58 9D 52'),
 }  # fmt: skip
 
 module = ExtractUtilsModule(
