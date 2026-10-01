@@ -117,8 +117,6 @@ vendor/etc/fstab.ramplus
 vendor/etc/init/init.ramplus.rc
 
 # RIL
-vendor/bin/cass
-vendor/etc/init/cass.rc
 vendor/etc/init/init.baseband.rc
 vendor/etc/init/init.vendor.rilcommon.rc
 vendor/etc/plmn_delta.bin
@@ -186,12 +184,6 @@ vendor/tee/driver/00000000-0000-0000-0000-494363447256
 vendor/tee/driver/00000000-0000-0000-0000-564c544b4456
 vendor/tee/driver/18d9f073-18a5-4ade-9def-875e07f7f293_
 vendor/tee/tui/resolution_common/ID00000100
-
-# VaultKeeper
-vendor/bin/vaultkeeperd
-vendor/etc/init/vaultkeeper_common.rc
-vendor/lib64/libstork_shared.so
-vendor/lib64/libvkservice.so
 
 # VNDK - from prebuilts/vndk/v33 - android-15.0.0_r20
 vendor/lib64/libcrypto.so:vendor/lib64/libcryptx.so;FIX_SONAME|7291c0e41fa86b3739df0c0c20de21e88f43661a|b52c4b61615d4a2a9a40a8514ec305556c28e2b8
