@@ -45,6 +45,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service.samsung
 
+# CarrierSettings
+PRODUCT_PACKAGES += \
+    CarrierSettingsResCommon
+
 # Charger
 PRODUCT_PACKAGES += \
     charger_res_images_vendor
