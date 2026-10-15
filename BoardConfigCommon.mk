@@ -58,7 +58,7 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
 
 ## Camera
 $(call soong_config_set_bool,samsungCameraVars,usage_64bit,true)
-$(call soong_config_set,samsungCameraVars,extra_ids,52,54) # ID=52 is depth camera and ID=54 is macro
+$(call soong_config_set,samsungCameraVars,extra_ids,52$(comma)54) # ID=52 is depth camera and ID=54 is macro
 
 ## Display
 BOARD_MINIMUM_DISPLAY_BRIGHTNESS := 1
