@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    SPDX-FileCopyrightText: The LineageOS Project
+    SPDX-License-Identifier: Apache-2.0
+-->
+<carrier_config>
+    <boolean name="imsvoice.voice_qos_precondition_supported_bool" value="false" />
+    <boolean name="imsvoice.voice_qos_precondition_supported_on_iwlan_bool" value="false" />
+</carrier_config>
