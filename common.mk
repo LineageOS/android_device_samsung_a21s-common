@@ -165,7 +165,14 @@ PRODUCT_PACKAGES += \
     libOMX.Exynos.WMV.Decoder
 
 # Overlays
-DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
+PRODUCT_PACKAGES += \
+    ApertureOverlayCommon \
+    FrameworkResOverlayCommon \
+    LineageSDKOverlayCommon \
+    SettingsOverlayCommon \
+    SystemUIOverlayCommon \
+    TelephonyResCommon
+
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
 # Permissions
