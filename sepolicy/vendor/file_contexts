@@ -35,9 +35,6 @@
 /efs/usb_hw_param(/.*)?                                                                                   u:object_r:sec_efs_file:s0
 /mnt/vendor/efs/wv.keys                                                                                   u:object_r:mnt_vendor_file:s0
 
-# Fingerprint
-/dev/goodix_fp                                                                                            u:object_r:fp_sensor_device:s0
-
 # GNSS
 /dev/gnss_ipc                                                                                             u:object_r:gnss_device:s0
 
